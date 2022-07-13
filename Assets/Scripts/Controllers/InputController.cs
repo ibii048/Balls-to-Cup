@@ -21,8 +21,10 @@ namespace Controllers
         {
             if (!_enable) return;
             
-            var inputValue = Input.GetAxis("Mouse X");
-            EventManager.RaiseTouchEvent(inputValue);
+            var inputValueX = Input.GetAxis("Mouse X");
+            var inputValueY = Input.GetAxis("Mouse Y");
+
+            EventManager.RaiseTouchEvent(Mathf.Abs(inputValueX) > Mathf.Abs(inputValueY) ? inputValueX : inputValueY);
         }
     }
 }
