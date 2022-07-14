@@ -1,3 +1,4 @@
+using UIs;
 using UnityEngine;
 
 namespace Managers
@@ -21,14 +22,14 @@ namespace Managers
 
         private void ShowScreen(Const.UIs uIs)
         {
-            CloseAllScreens();
-
-            switch (uIs)
+           switch (uIs)
             {
                 case Const.UIs.MainMenu:
+                    CloseAllScreens();
                     _uIMainMenu.gameObject.SetActive(true);
                     break;
                 case Const.UIs.HUD:
+                    CloseAllScreens();
                     _uIHUD.gameObject.SetActive(true);
                     break;
                 case Const.UIs.Win:

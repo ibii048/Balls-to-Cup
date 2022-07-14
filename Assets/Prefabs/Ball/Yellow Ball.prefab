@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2881232841080366359, guid: b70c0bab2d10ff84981e3210bb9e2d0f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b39802be801818244b78607290490e8a, type: 2}
     - target: {fileID: 6685303235361708945, guid: b70c0bab2d10ff84981e3210bb9e2d0f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -57,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6685303235361708949, guid: b70c0bab2d10ff84981e3210bb9e2d0f, type: 3}
       propertyPath: m_Name
-      value: Ball Core
+      value: Yellow Ball
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b70c0bab2d10ff84981e3210bb9e2d0f, type: 3}

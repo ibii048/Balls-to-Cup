@@ -1,18 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
+using Managers;
+using TMPro;
 using UnityEngine;
 
-public class UIHUD : MonoBehaviour
+namespace UIs
 {
-    // Start is called before the first frame update
-    void Start()
+    public class UIHUD : MonoBehaviour
     {
+        [SerializeField] private TextMeshProUGUI _ballCountText;
         
-    }
+        private void Awake() => RegisterEvents();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void OnDestroy() => UnRegisterEvents();
+
+        private void RegisterEvents()
+        {
+            EventManager.OnUIUpdateScore += UpdateScore;
+        }
+
+        private void UnRegisterEvents()
+        {
+            EventManager.OnUIUpdateScore -= UpdateScore;
+        }
+
+        private void UpdateScore(int totalBalls, int score)
+        {
+            _ballCountText.text = $"{score}/{totalBalls}";
+        }
     }
 }

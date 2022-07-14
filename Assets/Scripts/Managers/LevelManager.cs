@@ -13,11 +13,13 @@ namespace Managers
         private void RegisterEvents()
         {
             EventManager.LoadLevel += LoadLevel;
+            EventManager.OnLevelEnd += HandleLevelEnd;
         }
 
         private void UnRegisterEvents()
         {
             EventManager.LoadLevel -= LoadLevel;
+            EventManager.OnLevelEnd -= HandleLevelEnd;
         }
         
         private void LoadLevel()
@@ -26,9 +28,10 @@ namespace Managers
             {
                 Destroy(_currentLevel.gameObject);
                 _currentLevel = null;
+                EventManager.RaiseResetGameEvent();
             }
             
-            var level = Instantiate(Resources.Load(string.Format("Levels/Level_{0}", GetLevelNumber())), Vector3.zero, Quaternion.identity) as GameObject;
+            _currentLevel = Instantiate(Resources.Load(string.Format("Levels/Level_{0}", GetLevelNumber())), Vector3.zero, Quaternion.identity) as GameObject;
         }
 
         private void UpdateLevel()
@@ -43,6 +46,13 @@ namespace Managers
             }
             
             PlayerPrefsManager.SetLevel(currentLevelIndex);
+        }
+
+        private void HandleLevelEnd(bool success)
+        {
+            if(!success) return;
+            
+            UpdateLevel();
         }
 
         private int GetLevelNumber() => PlayerPrefsManager.GetLevel();

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Managers;
 using UnityEngine;
 
 public class ObjectPooler : MonoBehaviour
@@ -14,6 +15,14 @@ public class ObjectPooler : MonoBehaviour
 
     public List<Pool> pools;
     public Dictionary<string,Queue<GameObject>> poolDictionary;
+
+    private void OnEnable() => RegisterEvents();
+
+    private void OnDisable() => UnRegisterEvents();
+
+    private void RegisterEvents() => EventManager.ResetGame += Reset;
+
+    private void UnRegisterEvents() => EventManager.ResetGame -= Reset;
 
     void Awake()
     {
@@ -54,5 +63,13 @@ public class ObjectPooler : MonoBehaviour
         poolDictionary[tag].Enqueue(objectToSpawn);
 
         return objectToSpawn;
+    }
+
+    public void Reset()
+    {
+        foreach(Transform child in transform)
+        {
+            child.gameObject.SetActive(false);
+        }
     }
 }

@@ -6,9 +6,8 @@ namespace Managers
     {
         public static void SetLevel(int value)
         {
-            PlayerPrefs.SetFloat(Const.LEVEL_NUMBER, value);
+            PlayerPrefs.SetInt(Const.LEVEL_NUMBER, value);
             PlayerPrefs.Save();
-
         }
 
         public static int GetLevel()

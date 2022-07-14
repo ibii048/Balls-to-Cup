@@ -1,18 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
+using Managers;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class UILose : MonoBehaviour
+namespace UIs
 {
-    // Start is called before the first frame update
-    void Start()
+    public class UILose : MonoBehaviour
     {
+        [SerializeField] private Button _playButton;
         
-    }
+        private void OnEnable() => RegisterEvents();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void OnDisable() => UnRegisterEvents();
+
+        private void RegisterEvents() => _playButton.onClick.AddListener(StartGame);
+
+        private void UnRegisterEvents() => _playButton.onClick.RemoveListener(StartGame);
+
+        private void StartGame() => EventManager.RaiseStartGameEvent();
     }
 }
