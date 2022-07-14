@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5154705317881876947
+--- !u!1001 &1024715543849348718
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3668693183935516099, guid: 17a518d00f4ebbf4aa51f0b3984f0778, type: 3}
       propertyPath: m_Name
-      value: Level 2
+      value: Tube 2
       objectReference: {fileID: 0}
     - target: {fileID: 8157320663026761379, guid: 17a518d00f4ebbf4aa51f0b3984f0778, type: 3}
       propertyPath: m_RootOrder
@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8157320663026761379, guid: 17a518d00f4ebbf4aa51f0b3984f0778, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8157320663026761379, guid: 17a518d00f4ebbf4aa51f0b3984f0778, type: 3}
       propertyPath: m_LocalPosition.y

@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5113929409027311598, guid: df78110aeb80c6048a395985d80a7dcc, type: 3}
       propertyPath: m_Name
-      value: Player Core Variant
+      value: Player Level 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df78110aeb80c6048a395985d80a7dcc, type: 3}
@@ -62,7 +62,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5113929409027311592, guid: df78110aeb80c6048a395985d80a7dcc, type: 3}
   m_PrefabInstance: {fileID: 46003096849759669}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &132862213578951327
+--- !u!1001 &693013235233665065
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -71,7 +71,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 191849160836277702, guid: 8819ed4b3958920419471957b6769695, type: 3}
       propertyPath: m_Name
-      value: Level 1
+      value: Tube 1
       objectReference: {fileID: 0}
     - target: {fileID: 2878464067131828155, guid: 8819ed4b3958920419471957b6769695, type: 3}
       propertyPath: m_RootOrder
@@ -83,7 +83,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2878464067131828155, guid: 8819ed4b3958920419471957b6769695, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.35
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2878464067131828155, guid: 8819ed4b3958920419471957b6769695, type: 3}
       propertyPath: m_LocalPosition.z
