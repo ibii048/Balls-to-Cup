@@ -8,8 +8,7 @@ public class BallSpawner : MonoBehaviour
 {
     [SerializeField] private Transform _spawnPoint;
     [SerializeField] List<GameObject> _balls;
-
-    private int _ballCount = 20; 
+    [SerializeField] private int _ballCount = 20; 
 
     private void Start()
     {
