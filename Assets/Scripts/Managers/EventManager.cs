@@ -10,5 +10,11 @@ namespace Managers
 
         public static event Action<float> OnTouch = null;
         public static void RaiseTouchEvent(float inputValue) => OnTouch?.Invoke(inputValue);
+        
+        public static event Action<Const.UIs> OnUIChange = null;
+        public static void RaiseUIChangeEvent(Const.UIs ui) => OnUIChange?.Invoke(ui);
+        
+        public static event Action StartGame = null;
+        public static void RaiseStartGameEvent() => StartGame?.Invoke();
     }
 }
