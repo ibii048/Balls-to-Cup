@@ -16,5 +16,8 @@ namespace Managers
         
         public static event Action StartGame = null;
         public static void RaiseStartGameEvent() => StartGame?.Invoke();
+        
+        public static event Action LoadLevel = null;
+        public static void RaiseLoadLevelEvent() => LoadLevel?.Invoke();
     }
 }

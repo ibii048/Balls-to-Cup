@@ -23,6 +23,7 @@ namespace Managers
         private void Start()
         {
             EventManager.RaiseInputEnableEvent(false);
+            EventManager.RaiseLoadLevelEvent();
         }
         
         private void StartGame()
