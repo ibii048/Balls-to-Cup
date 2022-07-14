@@ -1041,6 +1041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 683fa21ba803aca47be5aaddccbbabf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ballCountText: {fileID: 396419829}
 --- !u!1 &1329300136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,7 +1234,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9016e2601abaf446a3ed2e38e0d6849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pools: []
+  pools:
+  - prefab: {fileID: 539598198196599206, guid: 9e91e3a9162d4484e9bfc02daf96f5d2, type: 3}
+    size: 10
+  - prefab: {fileID: 3732213762939506515, guid: ed522092057bca7479f938f431516c4f, type: 3}
+    size: 10
+  - prefab: {fileID: 4212234809596653353, guid: d11256a2992e91d409286daeb5c04b9d, type: 3}
+    size: 10
+  - prefab: {fileID: 2554948415464018796, guid: ea6c8bd21a206b2499fe10acebfe1ec1, type: 3}
+    size: 10
 --- !u!4 &1399243115
 Transform:
   m_ObjectHideFlags: 0
